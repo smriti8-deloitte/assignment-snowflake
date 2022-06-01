@@ -1,0 +1,30 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: snowflake_reputation_users
+    description: "Find top 10 users with the highest reputation. Print their id, displayname and reputation. Sort by highest reputation first."
+    columns:
+      - name: AccountId
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
